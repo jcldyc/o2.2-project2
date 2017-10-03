@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
         line[i][strlen(line[i]) - 1] = '\0';
         i++;
     }
-	total = i;
+	int total = i;
 	for(i=0; i<total;++i)
 		printf("%s\n", line[i]);
 	/* while(fgets(buff,BUFSIZE-1, fp) != NULL){
