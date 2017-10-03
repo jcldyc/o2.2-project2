@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
 	char buff[BUFSIZE];
 	
 	while(fgets(buff,BUFSIZE-1, fp) != NULL){
-		printf("%s\n", buff);
+		printf("%s", buff);
 	}
 	fclose(fp);
 }
