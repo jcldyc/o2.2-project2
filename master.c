@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
 	char buff[BUFSIZE];
 	int i = 0;
 	
-<<<<<<< HEAD
+
 	 while(fgets(line[i], BUF, fp)) {
         /* get rid of ending \n from fgets */
         line[i][strlen(line[i]) - 1] = '\0';
@@ -37,11 +37,7 @@ int main(int argc, char *argv[]){
 		//printf("%s\n", buff);
 		
 	} */
-=======
-	while(fgets(buff,BUFSIZE-1, fp) != NULL){
-		printf("%s", buff);
-	}
->>>>>>> cc4bb985f4928093e214df26e8c974fb53aee845
+
 	fclose(fp);
 }
 	
