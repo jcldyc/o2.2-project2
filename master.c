@@ -7,6 +7,8 @@
 #include <sys/shm.h>
 
 #define BUFSIZE 1000
+#define BUF 128
+#define TOT 10
 
 typedef struct File{
     char wordArray[50][256];
@@ -15,14 +17,25 @@ typedef struct File{
 //will add some getOpt stuff later 
 
 int main(int argc, char *argv[]){
+	char line[TOT][BUF];
 	FILE *fp = fopen(argv[1], "r");
 		
 		
 	char buff[BUFSIZE];
+	int i = 0;
 	
-	while(fgets(buff,BUFSIZE-1, fp) != NULL){
-		printf("%s\n", buff);
-	}
+	 while(fgets(line[i], BUF, fp)) {
+        /* get rid of ending \n from fgets */
+        line[i][strlen(line[i]) - 1] = '\0';
+        i++;
+    }
+	total = i;
+	for(i=0; i<total;++i)
+		printf("%s\n", line[i]);
+	/* while(fgets(buff,BUFSIZE-1, fp) != NULL){
+		//printf("%s\n", buff);
+		
+	} */
 	fclose(fp);
 }
 	
